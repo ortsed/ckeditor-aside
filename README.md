@@ -19,3 +19,34 @@ aside {
 
 .cke_icon{background-image:url(../../plugins/aside/images/aside.gif);background-position: 0;}
 .cke_skin_kama a.cke_button_asideRight .cke_icon {background-image:url(../../plugins/aside/images/aside-right.gif);background-position: 0;}
+
+
+ - Add Aside and/or Aside Right to the list of toolbar options and list of extraPlugins like so:
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "skin": "kama",
+        "toolbar": [
+            ["Source", "-", "PasteText", "PasteFromWord", "RemoveFormat"],
+            ["Find"],
+            ["Image", "Flash", "Table", "HorizontalRule", "SpecialChar"],
+            ["Undo", "Redo"],
+            "/",
+            ["Styles"],
+            ["Bold", "Italic", "Strike", "TextColor", "Font", "FontSize"],
+            ["NumberedList", "BulletedList", "-", "Outdent", "Indent", "Blockquote", "Aside", "Aside Right"],
+            ["Link", "Unlink", "Anchor"],
+            ["Maximize"]
+        ],
+        "height": 450,
+        "width": 760,
+        "filebrowserWindowWidth": 940,
+        "filebrowserWindowHeight": 747,
+        "filebrowserBrowsePatternName": "fb_browse",
+        "filebrowserBrowseParams": "?pop=3&type=image",
+        "extraPlugins" : "aside,font",
+        "autoParagraph": False,
+        "fillEmptyBlocks": False,
+
+    },
+}
